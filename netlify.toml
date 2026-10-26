@@ -1,0 +1,7 @@
+[build]
+  command = "node zeromissed-public-build.cjs"
+  publish = "public-site/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
