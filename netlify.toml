@@ -1,7 +1,11 @@
 [build]
-  command = "node zeromissed-public-build.cjs"
+  command = "npm install --no-save @netlify/identity@1.0.0 @netlify/blobs@10.0.0 esbuild@0.25.5 && node zeromissed-owner-build.cjs"
   publish = "public-site/dist"
+  functions = "netlify-owner-functions"
 
 [build.environment]
   NODE_VERSION = "22"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[functions]
+  node_bundler = "esbuild"
